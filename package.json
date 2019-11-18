@@ -1,6 +1,6 @@
 {
-  "name": "wxml2canvas",
-  "version": "1.0.1",
+  "name": "@yuu2lee4/wxml2canvas",
+  "version": "1.0.2",
   "description": "将wxml指定节点转换成canvas元素",
   "main": "index.js",
   "scripts": {
@@ -11,6 +11,7 @@
     "wxml",
     "canvas"
   ],
+  "files":["package.json","src","index.js"],
   "author": "wg",
   "license": "ISC"
 }
