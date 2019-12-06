@@ -19,11 +19,11 @@ class Wxml2Canvas {
         this.destZoom = options.destZoom || 3;
         this.destWidth = this.width * this.destZoom;
         this.destHeight = this.height * this.destZoom;
-        if (this.destRatio) {
-            if (this.destWidth / this.destHeight > this.destRatio) {
-                this.destHeight = this.destWidth / this.destRatio;
+        if (options.destRatio) {
+            if (this.destWidth / this.destHeight > options.destRatio) {
+                this.destHeight = this.destWidth / options.destRatio;
             } else {
-                this.destWidth = this.destHeight * this.destRatio;
+                this.destWidth = this.destHeight * options.destRatio;
             }
         }
         this.translateX = options.translateX * this.zoom || 0;
