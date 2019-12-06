@@ -19,6 +19,13 @@ class Wxml2Canvas {
         this.destZoom = options.destZoom || 3;
         this.destWidth = this.width * this.destZoom;
         this.destHeight = this.height * this.destZoom;
+        if (this.destRatio) {
+            if (this.destWidth / this.destHeight > this.destRatio) {
+                this.destHeight = this.destWidth / this.destRatio;
+            } else {
+                this.destWidth = this.destHeight * this.destRatio;
+            }
+        }
         this.translateX = options.translateX * this.zoom || 0;
         this.translateY = options.translateY * this.zoom || 0;
         this.gradientBackground = options.gradientBackground || null;
@@ -165,6 +172,8 @@ class Wxml2Canvas {
                 y: 0,
                 width: self.width,
                 height: self.height,
+                destWidth: self.destWidth,
+                destHeight: self.destHeight,
                 canvasId: self.element,
                 success: function (res) {
 
@@ -176,11 +185,6 @@ class Wxml2Canvas {
 
                     self.errorHandler({errcode: 1000, errmsg: 'save canvas error', e: res});
                 }
-            }
-
-            if(self.destZoom !== 3) {
-                obj.destWidth = self.destWidth;
-                obj.destHeight = self.destHeight;
             }
 
             wx.canvasToTempFilePath(obj, self.obj);

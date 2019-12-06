@@ -1,6 +1,6 @@
 {
   "name": "@yuu2lee4/wxml2canvas",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "将wxml指定节点转换成canvas元素",
   "main": "index.js",
   "scripts": {
@@ -11,6 +11,11 @@
     "wxml",
     "canvas"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yuu2lee4/wxml2canvas.git"
+  },
+  "homepage": "https://github.com/yuu2lee4/wxml2canvas",
   "files":["package.json","src","index.js"],
   "author": "wg",
   "license": "ISC"

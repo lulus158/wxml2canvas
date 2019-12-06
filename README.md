@@ -101,6 +101,7 @@ Page({
 | width | Number | 0 | 是 | 画布的宽，以iphone6的375为基准，其他机型按比例自动设置实际宽度 |
 | height | Number | 0 | 是 | 画布的高，同上 |
 | destZoom | Number | 3 | 否 | 输出的图片的像素密度，不建议传值，如果需要控制图片大小，可以适当减小 |
+| destRatio | Number | null | 否 | 输出的图片的长宽比 |
 | zoom | Number | 1 | 否 | 画布整体缩放比例，不建议传值，会覆盖各种机型的适配 |
 | translateX | Number | 0 | 否 | 画布整体横向位移 |
 | translateY | Number | 0 | 否 | 画布整体纵向位移 |
